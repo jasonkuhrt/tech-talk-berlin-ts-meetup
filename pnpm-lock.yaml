@@ -1,0 +1,29 @@
+lockfileVersion: 5.4
+
+specifiers:
+  alge: ^0.4.0
+
+dependencies:
+  alge: 0.4.0
+
+packages:
+
+  /alge/0.4.0:
+    resolution: {integrity: sha512-eMVrusTUAO5MLwmkv8e7KEqb1ZumyyYHn2aDN+C4XKKaGmUoa3rekiwukfi7ljz5Skq2q2cPXFMYAKU+mAlsfw==}
+    dependencies:
+      lodash.ismatch: 4.4.0
+      remeda: 1.0.1
+      zod: 3.18.0
+    dev: false
+
+  /lodash.ismatch/4.4.0:
+    resolution: {integrity: sha512-fPMfXjGQEV9Xsq/8MTSgUf255gawYRbjwMyDbcvDhXgV7enSZA0hynz6vMPnpAb5iONEzBHBPsT+0zes5Z301g==}
+    dev: false
+
+  /remeda/1.0.1:
+    resolution: {integrity: sha512-W/YDzHzIDDFnD9g5fKmvKSnV7uFvDV6EnM+dfd2iCQdhTyttvhcBkK3YTaxIikefr9UkAsxHyxdZWjhbWZ7x8g==}
+    dev: false
+
+  /zod/3.18.0:
+    resolution: {integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==}
+    dev: false
