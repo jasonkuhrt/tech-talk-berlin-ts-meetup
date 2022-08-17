@@ -1,3 +1,7 @@
+/**
+ * 1. Record Definition & Construction
+ */
+
 import { Alge } from 'alge'
 import { z } from 'zod'
 

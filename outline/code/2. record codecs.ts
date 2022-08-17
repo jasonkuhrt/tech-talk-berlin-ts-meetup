@@ -1,46 +1,55 @@
+/**
+ * 2. Record Codecs
+ */
+
 import { Alge } from 'alge'
 import { z } from 'zod'
 
 /**
- * Basic Definition & Construction
+ * Definition
+ */
+
+const Circle = Alge.record('Circle')
+  .schema({ radius: z.number() })
+  .codec(`graphic`, {
+    to: (circle) => `(---|${circle.radius})`,
+    from: (graphic) => {
+      const match = graphic.match(/\(---\|(\d+)\)/)
+      if (!match) return null
+      const [_, radius] = match
+      return {
+        radius: Number(radius),
+      }
+    },
+  })
+  .done()
+
+/**
+ * Usage
  */
 
 {
-  const Circle = Alge.record('Circle', {})
-  Circle.create()
+  Circle.to.graphic(Circle.create({ radius: 1 }))
+  Circle.to.graphic(Circle.create({ radius: 2 }))
+  Circle.from.graphic(`(---|1)`)
+  Circle.from.graphic(`(---|2)`)
+  Circle.from.graphic(`()`)
 }
 
 /**
- * Basic Input
+ * JSON
  */
 
 {
-  const Circle = Alge.record('Circle', {
-    radius: z.number(),
-  })
-  // Circle.create()
-  Circle.create({ radius: 1 })
+  Circle.to.json(Circle.create({ radius: 1 }))
+  Circle.to.json(Circle.create({ radius: 2 }))
+  Circle.from.json('{"_tag":"Circle","radius":1}')
 }
 
 /**
- * Input Validation
+ * Or Throw
  */
 
 {
-  Alge.record('Circle', {
-    radius: z.number().int(),
-  })
-  // Circle.create({ radius: 1.1 })
-}
-
-/**
- * Input Defaults
- */
-
-{
-  const Circle = Alge.record('Circle', {
-    radius: z.number().int().default(1),
-  })
-  Circle.create()
-  Circle.create({})
+  Circle.from.graphicOrThrow('()')
 }
