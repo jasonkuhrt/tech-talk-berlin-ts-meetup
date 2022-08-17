@@ -2,9 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   alge: ^0.4.0
+  zod: ^3.18.0
 
 dependencies:
   alge: 0.4.0
+  zod: 3.18.0
 
 packages:
 

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alge": "^0.4.0"
+    "alge": "^0.4.0",
+    "zod": "^3.18.0"
   }
 }

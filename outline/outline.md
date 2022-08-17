@@ -1,13 +1,13 @@
 # Outline
 
-1. [ ] Constructing Records
+1. [ ] Record Definition & Construction
 
-   1. [ ] Defining a record
-   1. [ ] Constructing a record instance
-   1. [ ] Input Defaults
+   1. [ ] Basic Definition & Construction
+   1. [ ] Basic Input
    1. [ ] Input Validation
+   1. [ ] Input Defaults
 
-1. [ ] Codecs
+1. [ ] Record Codecs
 
    1. [ ] Definition
    1. [ ] Usage
